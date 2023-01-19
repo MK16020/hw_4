@@ -56,7 +56,6 @@ Widget buildCard(String url) => Container(
       width: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Colors.white,
         border: const Border(
           left: BorderSide(
             color: Colors.green,
@@ -65,7 +64,7 @@ Widget buildCard(String url) => Container(
         ),
       ),
       child: Column(
-        children: [Image.network(url)],
+        children: [Image.network('$url'), const Divider()],
       ),
     );
 
@@ -74,10 +73,7 @@ class scrollCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: List.generate(
-        8,
-        (index) => buildCard(url[1]),
-      ),
+      children: List.generate(8, (i) => buildCard(url[i])),
     );
   }
 }
