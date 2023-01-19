@@ -45,7 +45,6 @@ List<String> url = [
   'images/Petra_4.webp',
   'images/Serena_4.webp',
   'images/Natalie_4.webp',
-  'images/MasterClass-Logo.webp',
   'images/Garden_4.webp',
   'images/Food_4.webp',
   'images/Dog_4.webp',
@@ -53,18 +52,12 @@ List<String> url = [
 ];
 
 Widget buildCard(String url) => Container(
-      width: 200,
+      //width: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        border: const Border(
-          left: BorderSide(
-            color: Colors.green,
-            width: 3,
-          ),
-        ),
       ),
       child: Column(
-        children: [Image.network('$url'), const Divider()],
+        children: [Image.network(url), const Divider()],
       ),
     );
 
@@ -73,7 +66,7 @@ class scrollCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: List.generate(8, (i) => buildCard(url[i])),
+      children: List.generate(7, (i) => buildCard(url[i])),
     );
   }
 }
