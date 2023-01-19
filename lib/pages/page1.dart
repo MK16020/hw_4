@@ -22,7 +22,7 @@ class firstPage extends StatelessWidget {
                       ],
                     ),
                     const Text('Unlimited access to 180+ classes delivered in bite-sized lessons.',
-                        style: TextStyle(fontFamily: 'Sofia Sans Extra Condensed', color: Colors.white, fontSize: 20)),
+                        style: TextStyle(fontFamily: 'SofiaSansExtraCondensed', color: Colors.white, fontSize: 20)),
                     Row(
                       children: const [
                         Text('Starting at \$17.25/month (billed annually) for all classes and sessions',
@@ -52,9 +52,21 @@ List<String> url = [
   'images/Alicia_4.webp'
 ];
 
-Widget buildCard(String url) => SizedBox(
+Widget buildCard(String url) => Container(
       width: 200,
-      child: Column(children: [Image.network(url)]),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        border: const Border(
+          left: BorderSide(
+            color: Colors.green,
+            width: 3,
+          ),
+        ),
+      ),
+      child: Column(
+        children: [Image.network(url)],
+      ),
     );
 
 class scrollCards extends StatelessWidget {
