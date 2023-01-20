@@ -12,7 +12,7 @@ class firstPage extends StatelessWidget {
           children: [
             Column(
               children: [
-                const SingleChildScrollView(scrollDirection: Axis.horizontal, child: scrollCards()),
+                const SingleChildScrollView(scrollDirection: Axis.horizontal, child: ScrollCards()),
                 Column(
                   children: [
                     Row(
@@ -23,13 +23,6 @@ class firstPage extends StatelessWidget {
                     ),
                     const Text('Unlimited access to 180+ classes delivered in bite-sized lessons.',
                         style: TextStyle(fontFamily: 'SofiaSansExtraCondensed', color: Colors.white, fontSize: 20)),
-                    Row(
-                      children: const [
-                        Text('Starting at \$17.25/month (billed annually) for all classes and sessions',
-                            style:
-                                TextStyle(fontFamily: 'Sofia Sans Extra Condensed', color: Colors.white, fontSize: 16)),
-                      ],
-                    )
                   ],
                 ),
               ],
@@ -61,8 +54,8 @@ Widget buildCard(String url) => Container(
       ),
     );
 
-class scrollCards extends StatelessWidget {
-  const scrollCards({super.key});
+class ScrollCards extends StatelessWidget {
+  const ScrollCards({super.key});
   @override
   Widget build(BuildContext context) {
     return Row(

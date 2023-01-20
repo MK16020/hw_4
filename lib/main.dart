@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hw_4/pages/page1.dart';
+import 'package:flutter_hw_4/pages/page2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(debugShowCheckedModeBanner: false, home: firstPage());
+    return const MaterialApp(debugShowCheckedModeBanner: false, home: SecondPage());
   }
 }
